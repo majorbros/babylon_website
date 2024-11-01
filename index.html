@@ -1,11 +1,207 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
-<title>Home of the Babylon Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圖片網頁</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8f9fa;
+        }
+        .header img {
+            height: 50px; /* 調整 logo 高度 */
+        }
+        .header select {
+            padding: 5px;
+        }
+        .fullscreen-image {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-image: url('https://i.imgur.com/B5qAdLk.jpg');
+            z-index: 1;   /* 全螢幕圖片在下層 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;   /* 使子元素靠下對齊 */
+            padding-bottom: 10%;    /* 底部留白 */
+        }
+        .fullscreen-image .image-link {
+            position: relative;
+        }
+        .fullscreen-image .android {
+            left: 30%; /* 調整 Android 圖標的水平位置 */
+        }
+        .fullscreen-image .ios {
+            right: 0%; /* 調整 iOS 圖標的水平位置 */
+        }
+        .image-container img {
+            display: none; /* 預設隱藏 */
+            width: 100%;   /* 圖片寬度 */
+            height: auto;
+        }
+        .image-container img.active {
+            display: block; /* 只顯示被選擇的圖片 */
+            width: 20%;
+            height: 20%;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .content-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 250px;
+            gap: 30px;
+        }
+        .row {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-side,.image-side2,.image-side3,.image-side4 {
+            flex: 1;
+            background-image: url('https://i.imgur.com/B5qAdLk.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 500px;
+            margin-right: 20%;
+        }
+        .text-side,.text-side2,.text-side3,.text-side4 {
+            flex: 2;
+        }
+        .footer {
+            color: black;
+            text-align: center;
+            position: absolute;
+            width: 100%;
+        }
+        .learn{
+            position: relative;
+            left:40%;
+        }
+        @media (max-width: 576px){
+            .button-container button {
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                background-color: rgba(0, 0, 0, 0.6);
+                color: white;
+                border: none;
+                border-radius: 5px;
+            }
+            .row {
+                display: flex;
+                flex-direction: column; /* 設置為垂直排列 */
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
-
-<h1>Babylon Ai Language Exchange</h1>
-
+    <div class="header">
+        <img src="https://i.imgur.com/4pTWYr0.jpg" alt="Logo"> <!-- 替換為您的 logo 圖片路徑 -->
+        <select>
+            <option> 請選擇選項 </option>
+            <option value="option1">選項 1</option>
+            <option value="option2">選項 2</option>
+            <option value="option3">選項 3</option>
+        </select>
+    </div>
+    <div class="fullscreen-image" id="fullscreenImage">
+        <a href="https://play.google.com/store/apps/details?id=com.majorbros.babylon&pcampaignid=web_share" target="_blank" class="image-link android">
+            <img src="https://i.imgur.com/0pTUZ87.png" alt="android" width="30%" height="30%">
+        </a>
+        <a href="https://apps.apple.com/us/app/babylon-ai-language-exchange/id6448163319?ign-itscg=30200&ign-itsct=apps_box_badge" target="_blank" class="image-link ios">
+            <img src="https://i.imgur.com/aqYh1JR.png" alt="ios" width="30%" height="30%">
+        </a>
+    </div>
+     <br>
+    <div style="border:3px solid "></div>
+     <br>
+      <br>
+    <div class="learn">
+    <h1 id="title">我要學</h1>
+    <div class="button-container">
+        <button onclick="showImage('image1', '中文')">中文</button>
+        <button onclick="showImage('image2', '英文')">英文</button>
+        <button onclick="showImage('image3', '日文')">日文</button>
+        <button onclick="showImage('image4', '西班牙文')">西班牙文</button>
+    </div>
+    <br>
+    <div class="image-container">
+        <img id="image1" src="https://i.imgur.com/B5qAdLk.jpg" alt="Image 1" class="active">
+        <img id="image2" src="https://i.imgur.com/4pTWYr0.jpg" alt="Image 2">
+        <img id="image3" src="https://i.imgur.com/B5qAdLk.jpg" alt="Image 3">
+        <img id="image4" src="https://i.imgur.com/4pTWYr0.jpg" alt="Image 4">
+    </div>
+    </div>
+     <br>
+    <div style="border:3px solid "></div>
+    <div class="content-section">
+        <div class="row">
+            <div class="image-side"></div>
+            <div class="text-side">
+                <h2>標題</h2>
+                <p>這是文字說明的範例。可以根據需要添加更多的文字內容。</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="text-side2">
+                <h2>標題</h2>
+                <p>這是文字說明的範例。可以根據需要添加更多的文字內容。</p>
+            </div>
+            <div class="image-side2"></div>
+        </div>
+        <div class="row">
+            <div class="image-side"></div>
+            <div class="text-side">
+                <h2>標題</h2>
+                <p>這是文字說明的範例。可以根據需要添加更多的文字內容。</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="text-side4">
+                <h2>標題</h2>
+                <p>這是文字說明的範例。可以根據需要添加更多的文字內容。</p>
+            </div>
+            <div class="image-side4"></div>
+        </div>
+    </div>
+    <script>
+        function showImage(imageId, language) {
+            // 更新標題
+            document.getElementById("title").innerText = "我要學" + language;
+            // 隱藏所有圖片
+            const images = document.querySelectorAll('.image-container img');
+            images.forEach(img => {
+                img.classList.remove('active');
+            });
+            // 顯示選擇的圖片
+            document.getElementById(imageId).classList.add('active');
+        }
+    </script>
+    <footer class="footer">
+        &copy; <script type="text/javascript">myDate = new Date();myYear = myDate.getFullYear();document.write(myYear);</script> Majorbros. All rights reserved.
+    </footer>
 </body>
 </html>
