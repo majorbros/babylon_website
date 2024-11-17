@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>圖片網頁</title>
+    <title>Babylon AI Language Exchange</title>
 
     <!-- 引入 jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -184,12 +184,12 @@
         }
         .download{
             position: absolute;
-            top : 200px;
-            left : 150px;
+            top : 700px;
+            left : 950px;
         }
         .download button {
-      		width: 100px;
-      		height: 40px;
+      		width: 150px;
+      		height: 60px;
       		font-size: 16px;
       		margin: 5px;
       		cursor: pointer;
@@ -202,6 +202,14 @@
             top: 50px;
             right: 20px; /* 調整這裡以定位在 logo 旁邊 */
         }
+        .row {
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+            width: 80%; /* Keeps a consistent width for alignment */
+            gap: 20px;
+        }       
         .image-side img, .image-side2 img, .image-side3 img, .image-side4 img {
             width: 250px; /* Fixed width for alignment */
             height: 500px; /* Maintains consistent height for images */
@@ -216,6 +224,7 @@
                 text-align: center;
             }
         }
+
     </style>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -265,27 +274,17 @@
     <div style="border:2px solid "></div>
     <br><br>
 
-    <div class="learn">
-        <h1 id="title" class="lang-tw">我要學</h1>
-        <h1 id="title" class="lang-en" style="display: none;">I want to learn</h1>
-        <h1 id="title" class="lang-ja" style="display: none;">学びたい</h1>
+<div class="learn">
+    <h1 id="title">我要學</h1> <!-- 預設語言 -->
+</div>
+
+<div class="learn1">
+    <div class="button-container">
+        <button onclick="showImage('中文')">中文</button>
+        <button onclick="showImage('English')">English</button>
+        <button onclick="showImage('日本語')">日本語</button>
     </div>
-
-    <div class="learn1">
-        <div class="button-container">
-            <button onclick="showImage('image1', '中文')" class="lang-tw">中文</button>
-            <button onclick="showImage('image2', '英文')" class="lang-tw">英文</button>
-            <button onclick="showImage('image3', '日文')" class="lang-tw">日文</button>
-
-            <button onclick="showImage('image1', 'Chinese')" class="lang-en" style="display: none;">Chinese</button>
-            <button onclick="showImage('image2', 'English')" class="lang-en" style="display: none;">English</button>
-            <button onclick="showImage('image3', 'Japanese')" class="lang-en" style="display: none;">Japanese</button>
-
-            <button onclick="showImage('image1', '中国語')" class="lang-ja" style="display: none;">中国語</button>
-            <button onclick="showImage('image2', '英語')" class="lang-ja" style="display: none;">英語</button>
-            <button onclick="showImage('image3', '日本語')" class="lang-ja" style="display: none;">日本語</button>
-        </div>
-    </div>
+</div>
 
     <br>
 
@@ -313,7 +312,7 @@
             <p class="lang-ja" style="display: none;">これは説明文の例です。必要に応じてさらに内容を追加できます。</p>
         </div>
         <div class="image-side">
-            <img src="https://i.imgur.com/7sS2Cxj.png" alt="Image Side 1">
+            <img src="https://i.imgur.com/dh7BLq0.png" alt="Image Side 1">
         </div>
     </div>
 
@@ -344,7 +343,7 @@
             <p class="lang-ja" style="display: none;">これは説明文の例です。必要に応じてさらに内容を追加できます。</p>
         </div>
         <div class="image-side3">
-            <img src="https://i.imgur.com/ppDXZdo.png" alt="Image Side 3">
+            <img src="https://i.imgur.com/7sS2Cxj.png" alt="Image Side 3">
         </div>
     </div>
 
@@ -360,7 +359,7 @@
             <p class="lang-ja" style="display: none;">これは説明文の例です。必要に応じてさらに内容を追加できます。</p>
         </div>
         <div class="image-side4">
-            <img src="https://i.imgur.com/dh7BLq0.png" alt="Image Side 4">
+            <img src="https://i.imgur.com/ppDXZdo.png" alt="Image Side 4">
         </div>
     </div>
 </div>
@@ -370,16 +369,14 @@
 
 
     <script>
-        function showImage(imageId, language) {
-            document.getElementById("title").innerText = $("#languageSelect").val() === 'tw' ? "我要學" + language :
-                $("#languageSelect").val() === 'en' ? "I want to learn " + language :
-                "学びたい " + language;
-            const images = document.querySelectorAll('.image-container img');
-            images.forEach(img => {
-                img.classList.remove('active');
-            });
-            document.getElementById(imageId).classList.add('active');
-        }
+
+    function showImage(language) {
+        var selectedLang = $('#languageSelect').val();
+        var prefix = selectedLang === 'tw' ? '我要學' :
+                     selectedLang === 'en' ? 'I want to learn' :
+                     '学びたい';
+        $('#title').text(prefix + ' ' + language);
+    }
     </script>
 
     <footer class="footer">
