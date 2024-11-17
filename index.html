@@ -176,6 +176,54 @@
                 text-align: center;
             }
         }
+        @media (max-width: 768px) {
+
+        .main-image {
+            width: 100%;
+            height:auto;
+        }
+        .download{
+            position: absolute;
+            top : 400px;
+            left : 500px;
+        }
+        .download button {
+      		width: 150px;
+      		height: 60px;
+      		font-size: 16px;
+      		margin: 5px;
+      		cursor: pointer;
+            background-color : black;
+            color: white;
+            border : 30px blue;
+        }
+        .select {
+            position: absolute;
+            top: 50px;
+            right: 20px; /* 調整這裡以定位在 logo 旁邊 */
+        }
+        .row {
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+            width: 80%; /* Keeps a consistent width for alignment */
+            gap: 20px;
+        }       
+        .image-side img, .image-side2 img, .image-side3 img, .image-side4 img {
+            width: 250px; /* Fixed width for alignment */
+            height: 500px; /* Maintains consistent height for images */
+        }
+        .learn {
+            position: relative;
+            left: 30%;
+        }
+            .learn1 {
+                position: relative;
+                left: 0;
+                text-align: center;
+            }
+        }        
         @media (max-width: 992px) {
 
         .main-image {
@@ -184,8 +232,8 @@
         }
         .download{
             position: absolute;
-            top : 700px;
-            left : 950px;
+            top : 400px;
+            left : 500px;
         }
         .download button {
       		width: 150px;
