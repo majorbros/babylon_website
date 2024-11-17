@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ｂabylon AI Language Exchange </title>
+    <title>圖片網頁</title>
 
     <!-- 引入 jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -79,6 +79,8 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    margin-left:20%;
+    margin-right:20%;
 }
 
 .row {
@@ -161,8 +163,8 @@
             gap: 20px;
         }       
         .image-side img, .image-side2 img, .image-side3 img, .image-side4 img {
-            width: 100px; /* Fixed width for alignment */
-            height: auto; /* Maintains consistent height for images */
+            width: 250px; /* Fixed width for alignment */
+            height: 500px; /* Maintains consistent height for images */
         }
         .learn {
             position: relative;
@@ -174,7 +176,46 @@
                 text-align: center;
             }
         }
+        @media (max-width: 992px) {
 
+        .main-image {
+            width: 100%;
+            height:auto;
+        }
+        .download{
+            position: absolute;
+            top : 200px;
+            left : 150px;
+        }
+        .download button {
+      		width: 100px;
+      		height: 40px;
+      		font-size: 16px;
+      		margin: 5px;
+      		cursor: pointer;
+            background-color : black;
+            color: white;
+            border : 30px blue;
+        }
+        .select {
+            position: absolute;
+            top: 50px;
+            right: 20px; /* 調整這裡以定位在 logo 旁邊 */
+        }
+        .image-side img, .image-side2 img, .image-side3 img, .image-side4 img {
+            width: 250px; /* Fixed width for alignment */
+            height: 500px; /* Maintains consistent height for images */
+        }
+        .learn {
+            position: relative;
+            left: 30%;
+        }
+            .learn1 {
+                position: relative;
+                left: 0;
+                text-align: center;
+            }
+        }
     </style>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -273,11 +314,11 @@
         </div>
         <div class="image-side">
             <img src="https://i.imgur.com/7sS2Cxj.png" alt="Image Side 1">
-        </div>        
+        </div>
     </div>
 
     <!-- Row 2: Text on the left, image on the right -->
-    <div class="row">      
+    <div class="row">    
         <div class="text-side2">
             <h2 class="lang-tw">標題</h2>
             <h2 class="lang-en" style="display: none;">Title</h2>
@@ -288,12 +329,12 @@
         </div>
         <div class="image-side2">
             <img src="https://i.imgur.com/uaCF4zt.png" alt="Image Side 2">
-        </div>  
-        
+        </div>    
     </div>
 
     <!-- Row 3: Image on the left, text on the right -->
     <div class="row row-reverse">
+
         <div class="text-side3">
             <h2 class="lang-tw">標題</h2>
             <h2 class="lang-en" style="display: none;">Title</h2>
@@ -304,11 +345,12 @@
         </div>
         <div class="image-side3">
             <img src="https://i.imgur.com/ppDXZdo.png" alt="Image Side 3">
-        </div>        
+        </div>
     </div>
 
     <!-- Row 4: Text on the left, image on the right -->
-    <div class="row">     
+    <div class="row">
+        
         <div class="text-side4">
             <h2 class="lang-tw">標題</h2>
             <h2 class="lang-en" style="display: none;">Title</h2>
@@ -319,8 +361,7 @@
         </div>
         <div class="image-side4">
             <img src="https://i.imgur.com/dh7BLq0.png" alt="Image Side 4">
-        </div>   
-        
+        </div>
     </div>
 </div>
 
