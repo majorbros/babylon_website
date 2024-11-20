@@ -12,6 +12,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            overflow-x: hidden;
         }
 
          .container {
@@ -21,10 +22,11 @@
         }
 
         /* 大圖片樣式 */
-        .main-image {
-            width: 100%;
-            height:90%;
-        }
+.main-image {
+    width: 100%;
+    height: 90%;
+    position: relative; /* 確保內部的絕對定位元素相對於此容器 */
+}
 
         
         .select {
@@ -33,11 +35,12 @@
             right: 220px; /* 調整這裡以定位在 logo 旁邊 */
         }
         
-        .download{
-            position: absolute;
-            top : 700px;
-            left : 950px;
-        }
+.download {
+    position: absolute;
+    bottom: 20px; /* 距離圖片底部 20px */
+    left: 50%; /* 水平中心 */
+    transform: translateX(-50%); /* 將按鈕水平居中 */
+}
             .download button {
       		width: 200px;
       		height: 80px;
@@ -133,11 +136,7 @@
         .main-image {
             width: 100%;
             height:auto;
-        }
-        .download{
-            position: absolute;
-            top : 200px;
-            left : 150px;
+            position: relative;
         }
         .download button {
       		width: 100px;
@@ -181,11 +180,7 @@
         .main-image {
             width: 100%;
             height:auto;
-        }
-        .download{
-            position: absolute;
-            top : 250px;
-            left : 200px;
+            position: relative;
         }
         .download button {
       		width: 150px;
@@ -229,11 +224,7 @@
         .main-image {
             width: 100%;
             height:auto;
-        }
-        .download{
-            position: absolute;
-            top : 400px;
-            left : 200px;
+            position: relative;
         }
         .download button {
       		width: 150px;
@@ -352,12 +343,12 @@
     <!-- Row 1: Image on the left, text on the right -->
     <div class="row row-reverse">
         <div class="text-side">
-            <h2 class="lang-tw">Learn languages smarter, not harder – with Babylob Ai!</h2>
-            <h2 class="lang-en" style="display: none;">Title</h2>
-            <h2 class="lang-ja" style="display: none;">タイトル</h2>
-            <p class="lang-tw">Learn any languages you need!</p>
-            <p class="lang-en" style="display: none;">This is an example of text description. You can add more text content as needed.</p>
-            <p class="lang-ja" style="display: none;">これは説明文の例です。必要に応じてさらに内容を追加できます。</p>
+            <h2 class="lang-tw">用 Babylob AI，語言學習更聰明、更高效！</h2>
+            <h2 class="lang-en" style="display: none;">Learn languages smarter, not harder – with Babylob Ai!</h2>
+            <h2 class="lang-ja" style="display: none;">Babylob AIで、もっと賢く言語を学ぼう！</h2>
+            <p class="lang-tw">輕鬆掌握你需要的任何語言！</p>
+            <p class="lang-en" style="display: none;">Learn any languages you need!</p>
+            <p class="lang-ja" style="display: none;">どんな言語も簡単にマスター！</p>
         </div>
         <div class="image-side">
             <img src="https://i.imgur.com/dh7BLq0.png" alt="Image Side 1">
@@ -367,12 +358,12 @@
     <!-- Row 2: Text on the left, image on the right -->
     <div class="row">    
         <div class="text-side2">
-            <h2 class="lang-tw">Learn the languages effortlessly!</h2>
-            <h2 class="lang-en" style="display: none;">Title</h2>
-            <h2 class="lang-ja" style="display: none;">タイトル</h2>
-            <p class="lang-tw">Babylon AI is easy to use and sign up.</p>
-            <p class="lang-en" style="display: none;">This is an example of text description. You can add more text content as needed.</p>
-            <p class="lang-ja" style="display: none;">これは説明文の例です。必要に応じてさらに内容を追加できます。</p>
+            <h2 class="lang-tw">學語言，從此不再費力！</h2>
+            <h2 class="lang-en" style="display: none;">Learn the languages effortlessly!</h2>
+            <h2 class="lang-ja" style="display: none;">語学学習、もう努力はいらない！</h2>
+            <p class="lang-tw">Babylon AI，簡單易用，快速上手！</p>
+            <p class="lang-en" style="display: none;">Babylon AI is easy to use and sign up.</p>
+            <p class="lang-ja" style="display: none;">Babylon AIは簡単＆便利、すぐに始められる！</p>
         </div>
         <div class="image-side2">
             <img src="https://i.imgur.com/uaCF4zt.png" alt="Image Side 2">
@@ -383,12 +374,12 @@
     <div class="row row-reverse">
 
         <div class="text-side3">
-            <h2 class="lang-tw">Your personal language tutor</h2>
-            <h2 class="lang-en" style="display: none;">Title</h2>
-            <h2 class="lang-ja" style="display: none;">タイトル</h2>
-            <p class="lang-tw">Start to have a conversation anytime and anywhere!</p>
-            <p class="lang-en" style="display: none;">This is an example of text description. You can add more text content as needed.</p>
-            <p class="lang-ja" style="display: none;">これは説明文の例です。必要に応じてさらに内容を追加できます。</p>
+            <h2 class="lang-tw">你的隨身語言家教，隨時開聊！</h2>
+            <h2 class="lang-en" style="display: none;">Your personal language tutor</h2>
+            <h2 class="lang-ja" style="display: none;">あなたのポケットチューター、いつでも会話OK！</h2>
+            <p class="lang-tw">無論何時何地，輕鬆開啟對話！</p>
+            <p class="lang-en" style="display: none;">Start to have a conversation anytime and anywhere!</p>
+            <p class="lang-ja" style="display: none;">好きなとき、好きな場所で会話を楽しもう！</p>
         </div>
         <div class="image-side3">
             <img src="https://i.imgur.com/7sS2Cxj.png" alt="Image Side 3">
@@ -399,12 +390,12 @@
     <div class="row">
         
         <div class="text-side4">
-            <h2 class="lang-tw">Create your own AI partner!</h2>
-            <h2 class="lang-en" style="display: none;">Title</h2>
-            <h2 class="lang-ja" style="display: none;">タイトル</h2>
-            <p class="lang-tw">join us to accelerate your language learning journey.</p>
-            <p class="lang-en" style="display: none;">This is an example of text description. You can add more text content as needed.</p>
-            <p class="lang-ja" style="display: none;">これは説明文の例です。必要に応じてさらに内容を追加できます。</p>
+            <h2 class="lang-tw">打造你的專屬 AI 學伴！</h2>
+            <h2 class="lang-en" style="display: none;">Create your own AI partner!</h2>
+            <h2 class="lang-ja" style="display: none;">自分だけのAIパートナーを作ろう！</h2>
+            <p class="lang-tw">加入我們，加速你的語言學習旅程！</p>
+            <p class="lang-en" style="display: none;">Join us to accelerate your language learning journey.</p>
+            <p class="lang-ja" style="display: none;">私たちと一緒に、語学学習を加速しよう！</p>
         </div>
         <div class="image-side4">
             <img src="https://i.imgur.com/ppDXZdo.png" alt="Image Side 4">
@@ -417,14 +408,25 @@
 
 
     <script>
+function showImage(language) {
+    var selectedLang = $('#languageSelect').val();
+    var prefix = selectedLang === 'tw' ? '我要學' :
+                 selectedLang === 'en' ? 'I want to learn' :
+                 selectedLang === 'ja' ? '学びたい' : '';
+    $('#title').text(prefix + ' ' + language);
 
-    function showImage(language) {
-        var selectedLang = $('#languageSelect').val();
-        var prefix = selectedLang === 'tw' ? '我要學' :
-                     selectedLang === 'en' ? 'I want to learn' :
-                     '学びたい';
-        $('#title').text(prefix + ' ' + language);
+    var imageId = language === '中文' ? 'image1' :
+                  language === 'English' ? 'image2' :
+                  language === '日本語' ? 'image3' : null;
+
+    if (imageId) {
+        const images = document.querySelectorAll('.image-container img');
+        images.forEach(img => {
+            img.classList.remove('active');
+        });
+        document.getElementById(imageId).classList.add('active');
     }
+}
     </script>
 
     <footer class="footer">
