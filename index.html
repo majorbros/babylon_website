@@ -270,7 +270,7 @@
             // 當語言選單發生變化時
             $('#languageSelect').change(function() {
                 var selectedLang = $(this).val();
-
+                updateTitle('');
 
                 // 隱藏所有語言的內容
                 $('.lang-tw, .lang-en, .lang-ja, .lang-es').hide();
@@ -287,6 +287,18 @@
                     $('.lang-es').show();
                 }
             });
+            $('.lang-button').click(function () {
+                const selectedLang = $('#languageSelect').val();
+                const buttonLang = $(this).data('lang');
+                updateTitle(buttonLang);
+            });
+            function updateTitle(language) {
+                const selectedLang = $('#languageSelect').val();
+                const prefix = selectedLang === 'tw' ? '我要學' :
+                               selectedLang === 'en' ? 'I want to learn' :
+                               selectedLang === 'ja' ? '学びたい' : '';
+                $('#title').text(prefix + (language ? ' ' + language : ''));
+            }
         });
     </script>
 </head>
@@ -329,9 +341,9 @@
 
     <div class="learn2">
         <div class="image-container">
-            <img id="image1" src="https://i.imgur.com/B5qAdLk.jpg" alt="Image 1" class="active">
-            <img id="image2" src="https://i.imgur.com/4pTWYr0.jpg" alt="Image 2">
-            <img id="image3" src="https://i.imgur.com/B5qAdLk.jpg" alt="Image 3">
+            <img id="image1" src="https://i.imgur.com/HlhQwZ2.jpg" alt="Image 1" class="active">
+            <img id="image2" src="https://i.imgur.com/v5cVjuA.jpg" alt="Image 2">
+            <img id="image3" src="https://i.imgur.com/OYGTf9Z.jpg" alt="Image 3">
         </div>
     </div>
 
@@ -343,9 +355,9 @@
     <!-- Row 1: Image on the left, text on the right -->
     <div class="row row-reverse">
         <div class="text-side">
-            <h2 class="lang-tw">用 Babylon AI，語言學習更聰明、更高效！</h2>
-            <h2 class="lang-en" style="display: none;">Learn languages smarter, not harder – with Babylon Ai!</h2>
-            <h2 class="lang-ja" style="display: none;">Babylon AIで、もっと賢く言語を学ぼう！</h2>
+            <h2 class="lang-tw">用 Babylob AI，語言學習更聰明、更高效！</h2>
+            <h2 class="lang-en" style="display: none;">Learn languages smarter, not harder – with Babylob Ai!</h2>
+            <h2 class="lang-ja" style="display: none;">Babylob AIで、もっと賢く言語を学ぼう！</h2>
             <p class="lang-tw">輕鬆掌握你需要的任何語言！</p>
             <p class="lang-en" style="display: none;">Learn any languages you need!</p>
             <p class="lang-ja" style="display: none;">どんな言語も簡単にマスター！</p>
@@ -435,6 +447,3 @@ function showImage(language) {
         <span class="lang-ja" style="display: none;">&copy; <script>document.write(new Date().getFullYear());</script> Majorbros. 全著作権所有。</span>
     </footer>
 </body>
-
-
-</html>
