@@ -90,13 +90,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%; /* Keeps a consistent width for alignment */
+    width: 60%; /* Keeps a consistent width for alignment */
     gap: 20px;
 }
 
 .image-side img, .image-side2 img, .image-side3 img, .image-side4 img {
-    width: 400px; /* Fixed width for alignment */
-    height: 550px; /* Maintains consistent height for images */
+    width: 350px; /* Fixed width for alignment */
+    height: 700px; /* Maintains consistent height for images */
 }
 
 .text-side, .text-side2, .text-side3, .text-side4 {
@@ -153,6 +153,13 @@
             top: 50px;
             right: 20px; /* 調整這裡以定位在 logo 旁邊 */
         }
+
+        .image-container img.active {
+            display: block;
+            /* 只顯示被選擇的圖片 */
+            width: 250px;
+            height: 500px;
+        }
         .row {
             display: flex;
             flex-direction:column;
@@ -167,13 +174,23 @@
         }
         .learn {
             position: relative;
-            left: 30%;
+        left: 0;
+        margin: 0; /* 移除邊距 */
+        padding: 0; /* 移除內距 */
+        margin-left: 0; /* 移除額外的左外邊距 */
+        margin-right: 0; /* 確保沒有右側外邊距 */
+        text-align: left; /* 確保文字靠左對齊 */
+font-size: 12px; 
         }
-            .learn1 {
-                position: relative;
-                left: 0;
-                text-align: center;
-            }
+        .learn1 {
+            position: relative;
+            left:0;
+            text-align: center;
+        }
+        .learn2 {
+            position: relative;
+            left: 20%;
+        }
         }
         @media (max-width: 768px) {
 
@@ -211,7 +228,7 @@
         }
         .learn {
             position: relative;
-            left: 30%;
+            left: 0;
         }
             .learn1 {
                 position: relative;
@@ -255,7 +272,7 @@
         }
         .learn {
             position: relative;
-            left: 30%;
+            left: 20%;
         }
             .learn1 {
                 position: relative;
@@ -355,9 +372,9 @@
     <!-- Row 1: Image on the left, text on the right -->
     <div class="row row-reverse">
         <div class="text-side">
-            <h2 class="lang-tw">用 Babylob AI，語言學習更聰明、更高效！</h2>
-            <h2 class="lang-en" style="display: none;">Learn languages smarter, not harder – with Babylob Ai!</h2>
-            <h2 class="lang-ja" style="display: none;">Babylob AIで、もっと賢く言語を学ぼう！</h2>
+            <h2 class="lang-tw">用 Babylon AI，語言學習更聰明、更高效！</h2>
+            <h2 class="lang-en" style="display: none;">Learn languages smarter, not harder – with Babylon Ai!</h2>
+            <h2 class="lang-ja" style="display: none;">Babylon AIで、もっと賢く言語を学ぼう！</h2>
             <p class="lang-tw">輕鬆掌握你需要的任何語言！</p>
             <p class="lang-en" style="display: none;">Learn any languages you need!</p>
             <p class="lang-ja" style="display: none;">どんな言語も簡単にマスター！</p>
