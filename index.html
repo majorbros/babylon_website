@@ -115,6 +115,12 @@ border-radius: 15px;
 }
 
 
+        h1 {
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient-animation 3s linear infinite;
+        }
         .footer {
             color: black;
             text-align: center;
@@ -200,6 +206,14 @@ font-size: 12px;
         .learn2 {
             position: relative;
             left: 15%;
+        }
+        .footer {
+            color: black;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            margin-top : 25px;
+            padding: 20px 0;
         }
         }
         @media (max-width: 768px) {
