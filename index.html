@@ -115,12 +115,19 @@ border-radius: 15px;
 }
 
 
-        h1 {
-            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: gradient-animation 3s linear infinite;
-        }
+h1 {
+    background: linear-gradient(90deg, #1e3a8a, #3b82f6, #a7c7e7, #a8d5ba);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 3s linear infinite;
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
         .footer {
             color: black;
             text-align: center;
