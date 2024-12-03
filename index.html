@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Babylon AI Language Exchange</title>
-
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
     <!-- 引入 jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: Nunito;
             overflow-x: hidden;
+            background-color: #FFF4D1;
         }
 
          .container {
             position: relative;
             width: 100%;
             height:auto;
+            
         }
 
         /* 大圖片樣式 */
@@ -92,8 +94,8 @@ border-radius: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 60%; /* Keeps a consistent width for alignment */
-    gap: 20px;
+    width: 90%; /* Keeps a consistent width for alignment */
+    gap: 200px;
 }
 
 .image-side img, .image-side2 img, .image-side3 img, .image-side4 img {
@@ -333,7 +335,7 @@ font-size: 12px;
 <body>
 <div class="container">
   <!-- 大圖片 -->
-  <img src="https://i.imgur.com/D7HsiMB.jpg" alt="Main Image" class="main-image">
+  <img src="https://i.imgur.com/6f63fuC.jpg" alt="Main Image" class="main-image">
   
           <select class="select" id="languageSelect">
             <option value="tw">中文</option>
@@ -382,9 +384,9 @@ font-size: 12px;
     <!-- Row 1: Image on the left, text on the right -->
     <div class="row row-reverse">
         <div class="text-side">
-            <h2 class="lang-tw">用 Babylon AI，語言學習更聰明、更高效！</h2>
-            <h2 class="lang-en" style="display: none;">Learn languages smarter, not harder – with Babylon Ai!</h2>
-            <h2 class="lang-ja" style="display: none;">Babylon AIで、もっと賢く言語を学ぼう！</h2>
+            <h1 class="lang-tw">用 Babylon AI，語言學習更聰明、更高效！</h1>
+            <h1 class="lang-en" style="display: none;">Learn languages smarter, not harder – with Babylon Ai!</h1>
+            <h1 class="lang-ja" style="display: none;">Babylon AIで、もっと賢く言語を学ぼう！</h1>
             <p class="lang-tw">輕鬆掌握你需要的任何語言！</p>
             <p class="lang-en" style="display: none;">Learn any languages you need!</p>
             <p class="lang-ja" style="display: none;">どんな言語も簡単にマスター！</p>
@@ -397,9 +399,9 @@ font-size: 12px;
     <!-- Row 2: Text on the left, image on the right -->
     <div class="row">    
         <div class="text-side2">
-            <h2 class="lang-tw">學語言，從此不再費力！</h2>
-            <h2 class="lang-en" style="display: none;">Learn the languages effortlessly!</h2>
-            <h2 class="lang-ja" style="display: none;">語学学習、もう努力はいらない！</h2>
+            <h1 class="lang-tw">學語言，從此不再費力！</h1>
+            <h1 class="lang-en" style="display: none;">Learn the languages effortlessly!</h1>
+            <h1 class="lang-ja" style="display: none;">語学学習、もう努力はいらない！</h1>
             <p class="lang-tw">Babylon AI，簡單易用，快速上手！</p>
             <p class="lang-en" style="display: none;">Babylon AI is easy to use and sign up.</p>
             <p class="lang-ja" style="display: none;">Babylon AIは簡単＆便利、すぐに始められる！</p>
@@ -413,9 +415,9 @@ font-size: 12px;
     <div class="row row-reverse">
 
         <div class="text-side3">
-            <h2 class="lang-tw">你的隨身語言家教，隨時開聊！</h2>
-            <h2 class="lang-en" style="display: none;">Your personal language tutor</h2>
-            <h2 class="lang-ja" style="display: none;">あなたのポケットチューター、いつでも会話OK！</h2>
+            <h1 class="lang-tw">你的隨身語言家教，隨時開聊！</h1>
+            <h1 class="lang-en" style="display: none;">Your personal language tutor</h1>
+            <h1 class="lang-ja" style="display: none;">あなたのポケットチューター、いつでも会話OK！</h1>
             <p class="lang-tw">無論何時何地，輕鬆開啟對話！</p>
             <p class="lang-en" style="display: none;">Start to have a conversation anytime and anywhere!</p>
             <p class="lang-ja" style="display: none;">好きなとき、好きな場所で会話を楽しもう！</p>
@@ -429,9 +431,9 @@ font-size: 12px;
     <div class="row">
         
         <div class="text-side4">
-            <h2 class="lang-tw">打造你的專屬 AI 學伴！</h2>
-            <h2 class="lang-en" style="display: none;">Create your own AI partner!</h2>
-            <h2 class="lang-ja" style="display: none;">自分だけのAIパートナーを作ろう！</h2>
+            <h1 class="lang-tw">打造你的專屬 AI 學伴！</h1>
+            <h1 class="lang-en" style="display: none;">Create your own AI partner!</h1>
+            <h1 class="lang-ja" style="display: none;">自分だけのAIパートナーを作ろう！</h1>
             <p class="lang-tw">加入我們，加速你的語言學習旅程！</p>
             <p class="lang-en" style="display: none;">Join us to accelerate your language learning journey.</p>
             <p class="lang-ja" style="display: none;">私たちと一緒に、語学学習を加速しよう！</p>
@@ -467,7 +469,13 @@ function showImage(language) {
     }
 }
     </script>
-
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
     <footer class="footer">
         <span class="lang-tw">&copy; <script>document.write(new Date().getFullYear());</script> Majorbros. All rights reserved.</span>
         <span class="lang-en" style="display: none;">&copy; <script>document.write(new Date().getFullYear());</script> Majorbros. All rights reserved.</span>
