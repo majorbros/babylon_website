@@ -42,18 +42,24 @@
     bottom: 20px; /* 距離圖片底部 20px */
     left: 50%; /* 水平中心 */
     transform: translateX(-50%); /* 將按鈕水平居中 */
-}
+} 
             .download button {
       		width: 200px;
       		height: 80px;
       		font-size: 16px;
+		font-weight: bold;
       		margin: 5px;
       		cursor: pointer;
-            background-color : black;
-            color: white;
-            border : 30px blue;
+            background-color : #FFFFFF;
+            color: #ac2929;
+            border : 3px solid #144579;
 	    border-radius: 15px;
+	    
     }
+.download button:hover {
+    background-color: #144579; /* 浅藍色 Hover 效果 */
+}
+
         
         .image-container img {
             display: none;
@@ -71,30 +77,42 @@
 border-radius: 15px;
         }
 
-        .button-container button {
+.button-container {
+    display: flex;
+
+    align-items: flex-start; /* 上對齊 */
+    gap: 15px; /* 按鈕間距 */
+}        
+.button-container button {
+	    height : 40px;
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            border: none;
+           background-color : #FFFFFF;
+            color: #ac2929;
+            border : 3px solid #144579;
             border-radius: 5px;
         }
+.button-container button:hover {
+    background-color: #144579; /* 更改背景色 */
+}
 
 .content-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    margin : 0 10%;
     margin-left:20%;
     margin-right:20%;
+    padding :0 10%;
 }
 
 .row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%; /* Keeps a consistent width for alignment */
+    width: 100%; /* Keeps a consistent width for alignment */
     gap: 200px;
 }
 
@@ -139,12 +157,12 @@ h1 {
 
         .learn {
             position: relative;
-            left: 40%;
+            left: 45%;
         }
 
         .learn1 {
             position: relative;
-            left: 40%;
+            left: 43%;
         }
         .learn2 {
             position: relative;
@@ -400,7 +418,7 @@ font-size: 12px;
 
 
     <br>
-    <div style="border:2px solid "></div>
+    <div style="border:1px solid #144579"></div>
     <br><br>
 
 <div class="learn">
@@ -426,7 +444,7 @@ font-size: 12px;
     </div>
 
     <br>
-    <div style="border:3px solid "></div>
+    <div style="border:1px solid #144579"></div>
 <br>
 <br>
 <div class="content-section">
