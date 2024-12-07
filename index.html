@@ -16,51 +16,59 @@
             background-color: #FAF9F6;
         }
 
-         .container {
+        .container {
             position: relative;
             width: 100%;
-            height:auto;
-            
+            height: auto;
+
         }
 
         /* 大圖片樣式 */
-.main-image {
-    width: 100%;
-    height: 90%;
-    position: relative; /* 確保內部的絕對定位元素相對於此容器 */
-}
+        .main-image {
+            width: 100%;
+            height: 90%;
+            position: relative;
+            /* 確保內部的絕對定位元素相對於此容器 */
+        }
 
-        
+
         .select {
             position: absolute;
             top: 50px;
-            right: 220px; /* 調整這裡以定位在 logo 旁邊 */
+            right: 220px;
+            /* 調整這裡以定位在 logo 旁邊 */
         }
-        
-.download {
-    position: absolute;
-    bottom: 20px; /* 距離圖片底部 20px */
-    left: 50%; /* 水平中心 */
-    transform: translateX(-50%); /* 將按鈕水平居中 */
-} 
-            .download button {
-      		width: 200px;
-      		height: 80px;
-      		font-size: 16px;
-		font-weight: bold;
-      		margin: 5px;
-      		cursor: pointer;
-            background-color : #FFFFFF;
-            color: #ac2929;
-            border : 3px solid #144579;
-	    border-radius: 15px;
-	    
-    }
-.download button:hover {
-    background-color: #144579; /* 浅藍色 Hover 效果 */
-}
 
-        
+        .download {
+            position: absolute;
+            bottom: 20px;
+            /* 距離圖片底部 20px */
+            left: 50%;
+            /* 水平中心 */
+            transform: translateX(-50%);
+            /* 將按鈕水平居中 */
+        }
+
+        .download button {
+            width: 200px;
+            height: 80px;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #FFFFFF;
+            color: #ac2929;
+            border: 3px solid #144579;
+            border-radius: 15px;
+
+        }
+
+        .download button:hover {
+            background-color: #144579;
+            /* 浅藍色 Hover 效果 */
+        }
+
+
         .image-container img {
             display: none;
             /* 預設隱藏 */
@@ -74,87 +82,115 @@
             /* 只顯示被選擇的圖片 */
             width: 20%;
             height: auto;
-border-radius: 15px;
+            border-radius: 15px;
         }
 
-.button-container {
-    display: flex;
-    text-align: center;
-    align-items: center; /* 上對齊 */
-    gap: 15px; /* 按鈕間距 */
-}        
-.button-container button {
-	    display:inline-flex
-	    height : 40px;
-            padding: 10 20px;
+        .button-container {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            /* 上對齊 */
+            gap: 15px;
+            /* 按鈕間距 */
+        }
 
+        .button-container button {
+            display: inline-flex;
+            height: 40px;
+            padding: 10 20px;
             font-size: 16px;
             cursor: pointer;
-           background-color : #FFFFFF;
+            background-color: #FFFFFF;
             color: #ac2929;
-            border : 3px solid #144579;
+            border: 3px solid #144579;
             border-radius: 5px;
-line-height: 1; 
+            line-height: 1;
         }
-.button-container button:hover {
-    background-color: #144579; /* 更改背景色 */
-}
 
-.content-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
+        .button-container button:hover {
+            background-color: #144579;
+            /* 更改背景色 */
+        }
 
-    margin-left:20%;
-    margin-right:20%;
+        .content-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2%;
+            max-width: 1200px; /* 限制最大寬度 */
+            margin: 0 auto; /* 自動居中 
+            /*margin-left: 20%;
+            margin-right: 20%;*/
+        }
 
-}
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            /* Keeps a consistent width for alignment */
+            gap: 10px;
+            margin-bottom: 20px;
+        }
 
-.row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%; /* Keeps a consistent width for alignment */
-    gap: 10px;
-}
+        .image-side {
+            flex: 1;
+            padding: 10px;
+        }
 
-.image-side img, .image-side2 img, .image-side3 img, .image-side4 img {
-    width: 350px; /* Fixed width for alignment */
-    height: 700px; /* Maintains consistent height for images */
-border-radius: 15px;
-}
+        .image-side img,
+        .image-side2 img,
+        .image-side3 img,
+        .image-side4 img {
+            width: 350px;
+            /* Fixed width for alignment */
+            height: auto;
+            /* Maintains consistent height for images */
+            border-radius: 15px;
+        }
 
-.text-side, .text-side2, .text-side3, .text-side4 {
-    flex: 1;
-    max-width: 350px; /* Matches image width to align edges */
-}
+        .text-side,
+        .text-side2,
+        .text-side3,
+        .text-side4 {
+            flex: 1;
+            max-width: 350px;
+            /* Matches image width to align edges */
+        }
 
-/* Alternating rows: Adjusts flex direction for alternating layout */
-.row-reverse {
-    flex-direction: row-reverse;
-}
+        /* Alternating rows: Adjusts flex direction for alternating layout */
+        .row-reverse {
+            flex-direction: row-reverse;
+        }
 
 
-h1 {
-    background: linear-gradient(90deg, #1e3a8a, #3b82f6, #a7c7e7, #a8d5ba);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradient-animation 3s linear infinite;
-}
+        h1 {
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6, #a7c7e7, #a8d5ba);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient-animation 3s linear infinite;
+        }
 
-@keyframes gradient-animation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
 
         .footer {
             color: black;
             text-align: center;
             position: relative;
             width: 100%;
-            margin-top : 50px;
+            margin-top: 50px;
             padding: 20px 0;
         }
 
@@ -167,210 +203,262 @@ h1 {
             position: relative;
             left: 43%;
         }
+
         .learn2 {
             position: relative;
             left: 40%;
         }
-.feedback-box {
-    border: 2px solid #FFD700; /* 黃色框線 */
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
-    background-color: #FFFBEA; /* 柔和背景色 */
-}
 
-.feedback-text h3 {
-    color: #FFD700;
-    font-size: 24px;
-}
+        .feedback-box {
+            border: 2px solid #FFD700;
+            /* 黃色框線 */
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            background-color: #FFFBEA;
+            /* 柔和背景色 */
+        }
 
-.feedback-text p {
-    font-size: 16px;
-    margin: 10px 0;
-    font-style: italic;
-}
+        .feedback-text h3 {
+            color: #FFD700;
+            font-size: 24px;
+        }
 
-.feedback-text span {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-    color: #555; /* 灰色文字 */
-}
+        .feedback-text p {
+            font-size: 16px;
+            margin: 10px 0;
+            font-style: italic;
+        }
+
+        .feedback-text span {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+            /* 灰色文字 */
+        }
 
         @media (max-width: 576px) {
 
-        .main-image {
-            width: 100%;
-            height:auto;
-            position: relative;
-        }
-        .download button {
-      		width: 100px;
-      		height: 40px;
-      		font-size: 16px;
-		font-weight: bold;
-      		margin: 5px;
-      		cursor: pointer;
-            background-color : #FFFFFF;
-            color: #ac2929;
-            border : 3px solid #144579;
-	    border-radius: 15px;
-        }
-        .select {
-            position: absolute;
-            top: 50px;
-            right: 20px; /* 調整這裡以定位在 logo 旁邊 */
+            .main-image {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .download button {
+                width: 100px;
+                height: 40px;
+                font-size: 16px;
+                font-weight: bold;
+                margin: 5px;
+                cursor: pointer;
+                background-color: #FFFFFF;
+                color: #ac2929;
+                border: 3px solid #144579;
+                border-radius: 15px;
+            }
+
+            .select {
+                position: absolute;
+                top: 50px;
+                right: 20px;
+                /* 調整這裡以定位在 logo 旁邊 */
+            }
+
+            .image-container img.active {
+                display: block;
+                /* 只顯示被選擇的圖片 */
+                width: 250px;
+                height: 500px;
+                border-radius: 15px;
+            }
+
+            .row {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 80%;
+                /* Keeps a consistent width for alignment */
+                gap: 20px;
+            }
+
+            .image-side img,
+            .image-side2 img,
+            .image-side3 img,
+            .image-side4 img {
+                width: 250px;
+                /* Fixed width for alignment */
+                height: 500px;
+                /* Maintains consistent height for images */
+                border-radius: 15px;
+            }
+
+            .learn {
+                position: relative;
+                left: 0;
+                margin: 0;
+                /* 移除邊距 */
+                padding: 0;
+                /* 移除內距 */
+                margin-left: 10%;
+                /* 移除額外的左外邊距 */
+                margin-right: 0;
+                /* 確保沒有右側外邊距 */
+                text-align: left;
+                /* 確保文字靠左對齊 */
+                font-size: 12px;
+            }
+
+            .learn1 {
+                position: relative;
+                margin-left: 15%;
+                text-align: center;
+            }
+
+            .learn2 {
+                position: relative;
+                left: 20%;
+            }
+
+            .footer {
+                color: black;
+                text-align: center;
+                position: relative;
+                width: 100%;
+                margin-top: 25px;
+                padding: 20px 0;
+            }
         }
 
-        .image-container img.active {
-            display: block;
-            /* 只顯示被選擇的圖片 */
-            width: 250px;
-            height: 500px;
-	    border-radius: 15px;
-        }
-        .row {
-            display: flex;
-            flex-direction:column;
-            justify-content: center;
-            align-items: center;
-            width: 80%; /* Keeps a consistent width for alignment */
-            gap: 20px;
-        }       
-        .image-side img, .image-side2 img, .image-side3 img, .image-side4 img {
-            width: 250px; /* Fixed width for alignment */
-            height: 500px; /* Maintains consistent height for images */
-	    border-radius: 15px;
-        }
-        .learn {
-            position: relative;
-        left: 0;
-        margin: 0; /* 移除邊距 */
-        padding: 0; /* 移除內距 */
-        margin-left: 10%; /* 移除額外的左外邊距 */
-        margin-right: 0; /* 確保沒有右側外邊距 */
-        text-align: left; /* 確保文字靠左對齊 */
-font-size: 12px; 
-        }
-        .learn1 {
-            position: relative;
-            margin-left: 15%;
-            text-align: center;
-        }
-        .learn2 {
-            position: relative;
-            left: 20%;
-        }
-        .footer {
-            color: black;
-            text-align: center;
-            position: relative;
-            width: 100%;
-            margin-top : 25px;
-            padding: 20px 0;
-        }
-        }
         @media (max-width: 768px) {
 
-        .main-image {
-            width: 100%;
-            height:auto;
-            position: relative;
-        }
-        .download button {
-      		width: 150px;
-      		height: 60px;
-      		font-size: 16px;
-		font-weight: bold;
-      		margin: 5px;
-      		cursor: pointer;
-            background-color : #FFFFFF;
-            color: #ac2929;
-            border : 3px solid #144579;
-	    border-radius: 15px;
-        }
-        .select {
-            position: absolute;
-            top: 50px;
-            right: 20px; /* 調整這裡以定位在 logo 旁邊 */
-        }
-        .row {
-            display: flex;
-            flex-direction:column;
-            justify-content: center;
-            align-items: center;
-            width: 80%; /* Keeps a consistent width for alignment */
-            gap: 20px;
-        }       
-        .image-side img, .image-side2 img, .image-side3 img, .image-side4 img {
-            width: 250px; /* Fixed width for alignment */
-            height: 500px; /* Maintains consistent height for images */
-	    border-radius: 15px;
-        }
-        .learn {
-            position: relative;
-            left: 0;
-        }
+            .main-image {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .download button {
+                width: 150px;
+                height: 60px;
+                font-size: 16px;
+                font-weight: bold;
+                margin: 5px;
+                cursor: pointer;
+                background-color: #FFFFFF;
+                color: #ac2929;
+                border: 3px solid #144579;
+                border-radius: 15px;
+            }
+
+            .select {
+                position: absolute;
+                top: 50px;
+                right: 20px;
+                /* 調整這裡以定位在 logo 旁邊 */
+            }
+
+            .row {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 80%;
+                /* Keeps a consistent width for alignment */
+                gap: 20px;
+            }
+
+            .image-side img,
+            .image-side2 img,
+            .image-side3 img,
+            .image-side4 img {
+                width: 250px;
+                /* Fixed width for alignment */
+                height: 500px;
+                /* Maintains consistent height for images */
+                border-radius: 15px;
+            }
+
+            .learn {
+                position: relative;
+                left: 0;
+            }
+
             .learn1 {
                 position: relative;
                 left: 0;
                 text-align: center;
             }
-        }        
+        }
+
         @media (max-width: 1024px) {
 
-        .main-image {
-            width: 100%;
-            height:auto;
-            position: relative;
-        }
-        .download button {
-      		width: 150px;
-      		height: 60px;
-      		font-size: 16px;
-		font-weight: bold;
-      		margin: 5px;
-      		cursor: pointer;
-            background-color : #FFFFFF;
-            color: #ac2929;
-            border : 3px solid #144579;
-	    border-radius: 15px;
-        }
-        .select {
-            position: absolute;
-            top: 50px;
-            right: 20px; /* 調整這裡以定位在 logo 旁邊 */
-        }
-        .row {
-            display: flex;
-            flex-direction:column;
-            justify-content: center;
-            align-items: center;
-            width: 80%; /* Keeps a consistent width for alignment */
-            gap: 20px;
-        }       
-        .image-side img, .image-side2 img, .image-side3 img, .image-side4 img {
-            width: 250px; /* Fixed width for alignment */
-            height: 500px; /* Maintains consistent height for images */
-	    border-radius: 15px;
-        }
-        .learn {
-            position: relative;
-            left: 20%;
-        }
+            .main-image {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .download button {
+                width: 150px;
+                height: 60px;
+                font-size: 16px;
+                font-weight: bold;
+                margin: 5px;
+                cursor: pointer;
+                background-color: #FFFFFF;
+                color: #ac2929;
+                border: 3px solid #144579;
+                border-radius: 15px;
+            }
+
+            .select {
+                position: absolute;
+                top: 50px;
+                right: 20px;
+                /* 調整這裡以定位在 logo 旁邊 */
+            }
+
+            .row {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 80%;
+                /* Keeps a consistent width for alignment */
+                gap: 20px;
+            }
+
+            .image-side img,
+            .image-side2 img,
+            .image-side3 img,
+            .image-side4 img {
+                width: 250px;
+                /* Fixed width for alignment */
+                height: 500px;
+                /* Maintains consistent height for images */
+                border-radius: 15px;
+            }
+
+            .learn {
+                position: relative;
+                left: 20%;
+            }
+
             .learn1 {
                 position: relative;
                 left: 0;
                 text-align: center;
             }
         }
-
     </style>
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function () {
             // 當語言選單發生變化時
-            $('#languageSelect').change(function() {
+            $('#languageSelect').change(function () {
                 var selectedLang = $(this).val();
                 updateTitle('');
 
@@ -397,8 +485,8 @@ font-size: 12px;
             function updateTitle(language) {
                 const selectedLang = $('#languageSelect').val();
                 const prefix = selectedLang === 'tw' ? '我要學' :
-                               selectedLang === 'en' ? 'I want to learn' :
-                               selectedLang === 'ja' ? '学びたい' : '';
+                    selectedLang === 'en' ? 'I want to learn' :
+                        selectedLang === 'ja' ? '学びたい' : '';
                 $('#title').text(prefix + (language ? ' ' + language : ''));
             }
         });
@@ -406,38 +494,41 @@ font-size: 12px;
 </head>
 
 <body>
-<div class="container">
-  <!-- 大圖片 -->
-  <img src="https://i.imgur.com/wI5YLTH.png" alt="Main Image" class="main-image">
-  
-          <select class="select" id="languageSelect">
+    <div class="container">
+        <!-- 大圖片 -->
+        <img src="https://i.imgur.com/wI5YLTH.png" alt="Main Image" class="main-image">
+
+        <select class="select" id="languageSelect">
             <option value="tw">中文</option>
             <option value="en">English</option>
             <option value="ja">日本語</option>
         </select>
-        <div class ="download">
-            <button onclick="location.href='https://55zkw.app.link/IhjlX5IpGNb?_p=c41d29c099047af1e11890ffebb2'" class="lang-tw">點擊下載</button>
-            <button onclick="location.href='https://55zkw.app.link/IhjlX5IpGNb?_p=c41d29c099047af1e11890ffebb2'" class="lang-en" style="display: none;">Click to download</button>
-            <button onclick="location.href='https://55zkw.app.link/IhjlX5IpGNb?_p=c41d29c099047af1e11890ffebb2'" class="lang-ja" style="display: none;">クリックしてダウンロード</button>
-        </div>    
-</div>
+        <div class="download">
+            <button onclick="location.href='https://55zkw.app.link/IhjlX5IpGNb?_p=c41d29c099047af1e11890ffebb2'"
+                class="lang-tw">點擊下載</button>
+            <button onclick="location.href='https://55zkw.app.link/IhjlX5IpGNb?_p=c41d29c099047af1e11890ffebb2'"
+                class="lang-en" style="display: none;">Click to download</button>
+            <button onclick="location.href='https://55zkw.app.link/IhjlX5IpGNb?_p=c41d29c099047af1e11890ffebb2'"
+                class="lang-ja" style="display: none;">クリックしてダウンロード</button>
+        </div>
+    </div>
 
 
     <br>
     <div style="border:1px solid #144579"></div>
     <br><br>
 
-<div class="learn">
-    <h1 id="title">我要學</h1> <!-- 預設語言 -->
-</div>
-
-<div class="learn1">
-    <div class="button-container">
-        <button onclick="showImage('中文')">中文</button>
-        <button onclick="showImage('English')">English</button>
-        <button onclick="showImage('日本語')">日本語</button>
+    <div class="learn">
+        <h1 id="title">我要學</h1> <!-- 預設語言 -->
     </div>
-</div>
+
+    <div class="learn1">
+        <div class="button-container">
+            <button onclick="showImage('中文')">中文</button>
+            <button onclick="showImage('English')">English</button>
+            <button onclick="showImage('日本語')">日本語</button>
+        </div>
+    </div>
 
     <br>
 
@@ -451,143 +542,153 @@ font-size: 12px;
 
     <br>
     <div style="border:1px solid #144579"></div>
-<br>
-<br>
-<div class="content-section">
-    <!-- Row 1: Image on the left, text on the right -->
-    <div class="row row-reverse">
-        <div class="text-side">
-            <h1 class="lang-tw">用 Babylon AI，語言學習更聰明、更高效！</h1>
-            <h1 class="lang-en" style="display: none;">Learn languages smarter, not harder – with Babylon Ai!</h1>
-            <h1 class="lang-ja" style="display: none;">Babylon AIで、もっと賢く言語を学ぼう！</h1>
-            <p class="lang-tw">輕鬆掌握你需要的任何語言！</p>
-            <p class="lang-en" style="display: none;">Learn any languages you need!</p>
-            <p class="lang-ja" style="display: none;">どんな言語も簡単にマスター！</p>
-            </br>
-            <div class="feedback-box">
-    <div class="feedback-text">
-        <h3>⭐⭐⭐⭐⭐</h3>
-        <p class="lang-tw">"一個有趣的方式來開始學習新的語言。"</p>
-        <p class="lang-en" style="display: none;">"An interesting way to start learning a new language."</p>
-        <p class="lang-ja" style="display: none;">"新しい言語を学び始めるための面白い方法です。"</p>
-        <span>- Brian Liu -</span>
-    </div>
-</div>
-
-        </div>
-        <div class="image-side">
-            <img src="https://i.imgur.com/dh7BLq0.png" alt="Image Side 1">
-        </div>
-    </div>
-    
-
-    <!-- Row 2: Text on the left, image on the right -->
-    <div class="row">    
-        <div class="text-side2">
-            <h1 class="lang-tw">學語言，從此不再費力！</h1>
-            <h1 class="lang-en" style="display: none;">Learn the languages effortlessly!</h1>
-            <h1 class="lang-ja" style="display: none;">語学学習、もう努力はいらない！</h1>
-            <p class="lang-tw">Babylon AI，簡單易用，快速上手！</p>
-            <p class="lang-en" style="display: none;">Babylon AI is easy to use and sign up.</p>
-            <p class="lang-ja" style="display: none;">Babylon AIは簡単＆便利、すぐに始められる！</p>
-                        </br>
-            <div class="feedback-box">
-    <div class="feedback-text">
-        <h3>⭐⭐⭐⭐⭐</h3>
-        <p class="lang-tw">"UI設計操作很方便簡單，輔助學習外語很不錯。"</p>
-        <p class="lang-en" style="display: none;">"The UI design is very user-friendly and simple to operate. It's a great tool to assist in learning foreign languages."</p>
-        <p class="lang-ja" style="display: none;">"UIデザインがとても使いやすく、操作も簡単です。外国語学習をサポートする素晴らしいツールです。"</p>
-        <span>- Chang Nako -</span>
-    </div>
-</div>
-        </div>
-        <div class="image-side2">
-            <img src="https://i.imgur.com/uaCF4zt.png" alt="Image Side 2">
-        </div>    
-    </div>
-
-    <!-- Row 3: Image on the left, text on the right -->
-    <div class="row row-reverse">
-
-        <div class="text-side3">
-            <h1 class="lang-tw">你的隨身語言家教，隨時開聊！</h1>
-            <h1 class="lang-en" style="display: none;">Your personal language tutor</h1>
-            <h1 class="lang-ja" style="display: none;">あなたのポケットチューター、いつでも会話OK！</h1>
-            <p class="lang-tw">無論何時何地，輕鬆開啟對話！</p>
-            <p class="lang-en" style="display: none;">Start to have a conversation anytime and anywhere!</p>
-            <p class="lang-ja" style="display: none;">好きなとき、好きな場所で会話を楽しもう！</p>
-            </br>
-            <div class="feedback-box">
-    <div class="feedback-text">
-        <h3>⭐⭐⭐⭐⭐</h3>
-        <p class="lang-tw">"使用這個平台覺得很不錯還可以學習用語言做交流，超推薦的。"</p>
-        <p class="lang-en" style="display: none;">"This platform is really great! You can also learn to use the language for communication. Highly recommended!"</p>
-        <p class="lang-ja" style="display: none;">"このプラットフォームは本当に素晴らしいです！言語を使って交流する方法も学べます。超おすすめです！"</p>
-        <span>- Yuki Wang -</span>
-    </div>
-</div>            
-        </div>
-        <div class="image-side3">
-            <img src="https://i.imgur.com/7sS2Cxj.png" alt="Image Side 3">
-        </div>
-    </div>
-
-    <!-- Row 4: Text on the left, image on the right -->
-    <div class="row">
-        
-        <div class="text-side4">
-            <h1 class="lang-tw">打造你的專屬 AI 學伴！</h1>
-            <h1 class="lang-en" style="display: none;">Create your own AI partner!</h1>
-            <h1 class="lang-ja" style="display: none;">自分だけのAIパートナーを作ろう！</h1>
-            <p class="lang-tw">加入我們，加速你的語言學習旅程！</p>
-            <p class="lang-en" style="display: none;">Join us to accelerate your language learning journey.</p>
-            <p class="lang-ja" style="display: none;">私たちと一緒に、語学学習を加速しよう！</p>
+    <br>
+    <br>
+    <div class="content-section">
+        <!-- Row 1: Image on the left, text on the right -->
+        <div class="row row-reverse">
+            <div class="text-side">
+                <h1 class="lang-tw">用 Babylon AI，語言學習更聰明、更高效！</h1>
+                <h1 class="lang-en" style="display: none;">Learn languages smarter, not harder – with Babylon Ai!</h1>
+                <h1 class="lang-ja" style="display: none;">Babylon AIで、もっと賢く言語を学ぼう！</h1>
+                <p class="lang-tw">輕鬆掌握你需要的任何語言！</p>
+                <p class="lang-en" style="display: none;">Learn any languages you need!</p>
+                <p class="lang-ja" style="display: none;">どんな言語も簡単にマスター！</p>
                 </br>
-            <div class="feedback-box">
-    <div class="feedback-text">
-        <h3>⭐⭐⭐⭐⭐</h3>
-        <p class="lang-tw">"可以創造自己的語言夥伴，還能選擇每個夥伴的聲音!"</p>
-        <p class="lang-en" style="display: none;">"You can create your own language partner and even choose the voice for each partner!"</p>
-        <p class="lang-ja" style="display: none;">"自分だけの言語パートナーを作ることができて、さらに各パートナーの声も選べます！"</p>
-        <span>- Cheng -</span>
-    </div>
-</div>        
+                <div class="feedback-box">
+                    <div class="feedback-text">
+                        <h3>⭐⭐⭐⭐⭐</h3>
+                        <p class="lang-tw">"一個有趣的方式來開始學習新的語言。"</p>
+                        <p class="lang-en" style="display: none;">"An interesting way to start learning a new language."
+                        </p>
+                        <p class="lang-ja" style="display: none;">"新しい言語を学び始めるための面白い方法です。"</p>
+                        <span>- Brian Liu -</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="image-side">
+                <img src="https://i.imgur.com/dh7BLq0.png" alt="Image Side 1">
+            </div>
         </div>
-        <div class="image-side4">
-            <img src="https://i.imgur.com/ppDXZdo.png" alt="Image Side 4">
+
+
+        <!-- Row 2: Text on the left, image on the right -->
+        <div class="row">
+            <div class="text-side2">
+                <h1 class="lang-tw">學語言，從此不再費力！</h1>
+                <h1 class="lang-en" style="display: none;">Learn the languages effortlessly!</h1>
+                <h1 class="lang-ja" style="display: none;">語学学習、もう努力はいらない！</h1>
+                <p class="lang-tw">Babylon AI，簡單易用，快速上手！</p>
+                <p class="lang-en" style="display: none;">Babylon AI is easy to use and sign up.</p>
+                <p class="lang-ja" style="display: none;">Babylon AIは簡単＆便利、すぐに始められる！</p>
+                </br>
+                <div class="feedback-box">
+                    <div class="feedback-text">
+                        <h3>⭐⭐⭐⭐⭐</h3>
+                        <p class="lang-tw">"UI設計操作很方便簡單，輔助學習外語很不錯。"</p>
+                        <p class="lang-en" style="display: none;">"The UI design is very user-friendly and simple to
+                            operate. It's a great tool to assist in learning foreign languages."</p>
+                        <p class="lang-ja" style="display: none;">"UIデザインがとても使いやすく、操作も簡単です。外国語学習をサポートする素晴らしいツールです。"</p>
+                        <span>- Chang Nako -</span>
+                    </div>
+                </div>
+            </div>
+            <div class="image-side2">
+                <img src="https://i.imgur.com/uaCF4zt.png" alt="Image Side 2">
+            </div>
+        </div>
+
+        <!-- Row 3: Image on the left, text on the right -->
+        <div class="row row-reverse">
+
+            <div class="text-side3">
+                <h1 class="lang-tw">你的隨身語言家教，隨時開聊！</h1>
+                <h1 class="lang-en" style="display: none;">Your personal language tutor</h1>
+                <h1 class="lang-ja" style="display: none;">あなたのポケットチューター、いつでも会話OK！</h1>
+                <p class="lang-tw">無論何時何地，輕鬆開啟對話！</p>
+                <p class="lang-en" style="display: none;">Start to have a conversation anytime and anywhere!</p>
+                <p class="lang-ja" style="display: none;">好きなとき、好きな場所で会話を楽しもう！</p>
+                </br>
+                <div class="feedback-box">
+                    <div class="feedback-text">
+                        <h3>⭐⭐⭐⭐⭐</h3>
+                        <p class="lang-tw">"使用這個平台覺得很不錯還可以學習用語言做交流，超推薦的。"</p>
+                        <p class="lang-en" style="display: none;">"This platform is really great! You can also learn to
+                            use the language for communication. Highly recommended!"</p>
+                        <p class="lang-ja" style="display: none;">"このプラットフォームは本当に素晴らしいです！言語を使って交流する方法も学べます。超おすすめです！"</p>
+                        <span>- Yuki Wang -</span>
+                    </div>
+                </div>
+            </div>
+            <div class="image-side3">
+                <img src="https://i.imgur.com/7sS2Cxj.png" alt="Image Side 3">
+            </div>
+        </div>
+
+        <!-- Row 4: Text on the left, image on the right -->
+        <div class="row">
+
+            <div class="text-side4">
+                <h1 class="lang-tw">打造你的專屬 AI 學伴！</h1>
+                <h1 class="lang-en" style="display: none;">Create your own AI partner!</h1>
+                <h1 class="lang-ja" style="display: none;">自分だけのAIパートナーを作ろう！</h1>
+                <p class="lang-tw">加入我們，加速你的語言學習旅程！</p>
+                <p class="lang-en" style="display: none;">Join us to accelerate your language learning journey.</p>
+                <p class="lang-ja" style="display: none;">私たちと一緒に、語学学習を加速しよう！</p>
+                </br>
+                <div class="feedback-box">
+                    <div class="feedback-text">
+                        <h3>⭐⭐⭐⭐⭐</h3>
+                        <p class="lang-tw">"可以創造自己的語言夥伴，還能選擇每個夥伴的聲音!"</p>
+                        <p class="lang-en" style="display: none;">"You can create your own language partner and even
+                            choose the voice for each partner!"</p>
+                        <p class="lang-ja" style="display: none;">"自分だけの言語パートナーを作ることができて、さらに各パートナーの声も選べます！"</p>
+                        <span>- Cheng -</span>
+                    </div>
+                </div>
+            </div>
+            <div class="image-side4">
+                <img src="https://i.imgur.com/ppDXZdo.png" alt="Image Side 4">
+            </div>
         </div>
     </div>
-</div>
 
 
 
 
 
     <script>
-function showImage(language) {
-    var selectedLang = $('#languageSelect').val();
-    var prefix = selectedLang === 'tw' ? '我要學' :
-                 selectedLang === 'en' ? 'I want to learn' :
-                 selectedLang === 'ja' ? '学びたい' : '';
-    $('#title').text(prefix + ' ' + language);
+        function showImage(language) {
+            var selectedLang = $('#languageSelect').val();
+            var prefix = selectedLang === 'tw' ? '我要學' :
+                selectedLang === 'en' ? 'I want to learn' :
+                    selectedLang === 'ja' ? '学びたい' : '';
+            $('#title').text(prefix + ' ' + language);
 
-    var imageId = language === '中文' ? 'image1' :
-                  language === 'English' ? 'image2' :
-                  language === '日本語' ? 'image3' : null;
+            var imageId = language === '中文' ? 'image1' :
+                language === 'English' ? 'image2' :
+                    language === '日本語' ? 'image3' : null;
 
-    if (imageId) {
-        const images = document.querySelectorAll('.image-container img');
-        images.forEach(img => {
-            img.classList.remove('active');
-        });
-        document.getElementById(imageId).classList.add('active');
-    }
-}
+            if (imageId) {
+                const images = document.querySelectorAll('.image-container img');
+                images.forEach(img => {
+                    img.classList.remove('active');
+                });
+                document.getElementById(imageId).classList.add('active');
+            }
+        }
     </script>
 
     <footer class="footer">
-        <span class="lang-tw">&copy; <script>document.write(new Date().getFullYear());</script> Majorbros. All rights reserved.</span>
-        <span class="lang-en" style="display: none;">&copy; <script>document.write(new Date().getFullYear());</script> Majorbros. All rights reserved.</span>
-        <span class="lang-ja" style="display: none;">&copy; <script>document.write(new Date().getFullYear());</script> Majorbros. 全著作権所有。</span>
+        <span class="lang-tw">&copy;
+            <script>document.write(new Date().getFullYear());</script> Majorbros. All rights reserved.
+        </span>
+        <span class="lang-en" style="display: none;">&copy;
+            <script>document.write(new Date().getFullYear());</script> Majorbros. All rights reserved.
+        </span>
+        <span class="lang-ja" style="display: none;">&copy;
+            <script>document.write(new Date().getFullYear());</script> Majorbros. 全著作権所有。
+        </span>
     </footer>
 </body>
