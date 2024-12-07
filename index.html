@@ -67,7 +67,14 @@
             background-color: #144579;
             /* 浅藍色 Hover 效果 */
         }
-
+        .image-container {
+    display: flex; /* 使用 Flexbox 控制圖片排列 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    gap: 10px; /* 圖片之間的間距 */
+    width: 100%; /* 自適應寬度 */
+ 
+}
 
         .image-container img {
             display: none;
@@ -195,19 +202,27 @@
         }
 
         .learn {
-            position: relative;
-            left: 45%;
-        }
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 水平居中 */
+    justify-content: center; /* 垂直居中 */
+    margin-top: 20px; /* 與頂部的距離 */
+}
 
-        .learn1 {
-            position: relative;
-            left: 43%;
-        }
+.learn1 {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    gap: 10px; /* 按鈕間距 */
+    margin-top: 10px; /* 與上方標題的距離 */
+}
 
-        .learn2 {
-            position: relative;
-            left: 40%;
-        }
+.learn2 {
+    display: flex; /* 使用 Flexbox 排列 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    margin-top: 20px; /* 與上方內容的間距 */
+    width: 100%; /* 填滿父容器 */
+}
 
         .feedback-box {
             border: 2px solid #FFD700;
@@ -296,19 +311,19 @@
                 border-radius: 15px;
             }
 
-            .learn {
+            /*learn {
                 position: relative;
                 left: 0;
                 margin: 0;
-                /* 移除邊距 */
+
                 padding: 0;
-                /* 移除內距 */
+
                 margin-left: 10%;
-                /* 移除額外的左外邊距 */
+
                 margin-right: 0;
-                /* 確保沒有右側外邊距 */
+
                 text-align: left;
-                /* 確保文字靠左對齊 */
+
                 font-size: 12px;
             }
 
@@ -321,7 +336,7 @@
             .learn2 {
                 position: relative;
                 left: 20%;
-            }
+            }*/
 
             .footer {
                 color: black;
@@ -387,7 +402,7 @@
                 /* Maintains consistent height for images */
                 border-radius: 15px;
             }
-            .learn {
+            /*.learn {
             position: relative;
             left: 45%;
             font-size: 16px;
@@ -395,12 +410,12 @@
 
         .learn1 {
             position: relative;
-            left: 34%;/*36*/
+            left: 34%;
         }
         .learn2 {
                 position: relative;
                 left: 36%;
-            }
+            }*/
         }
 
         @media (max-width: 1024px) {
@@ -457,7 +472,7 @@
                 /* Maintains consistent height for images */
                 border-radius: 15px;
             }
-            .learn {
+            /*.learn {
             position: relative;
             left: 40%;
             font-size: 16px;
@@ -465,8 +480,8 @@
 
         .learn1 {
             position: relative;
-            left: 37%; /*36*/
-        }
+            left: 37%; 
+        }*/
         }
     </style>
     <script type="text/javascript">
